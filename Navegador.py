@@ -32,11 +32,30 @@ class Stack:
     def clear(self):
         self.items.clear()
 
+# Clase Nodo para la lista doblemente enlazada de pestañas
 class NodoPestania:
-    def __init__(self, nombre):
-        self.nombre = nombre  # Nombre de la pestaña
-        self.siguiente = None  # Puntero al siguiente nodo
+    def __init__(self, pestania):
+        self.pestania = pestania
+        self.prev = None
+        self.next = None
 
-    def __str__(self):
-        return f"NodoPestania(nombre={self.nombre})"
+# Clase Cola para implementar la estructura de datos cola
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def enqueue(self, item):
+        self.items.append(item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.items.pop(0)
+        else:
+            return None
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
 
