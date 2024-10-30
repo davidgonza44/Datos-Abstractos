@@ -8,9 +8,6 @@ class Stack:
     def __init__(self):
         self.items = []
 
-    def is_empty(self):
-        return len(self.items) == 0
-
     def push(self, item):
         self.items.append(item)
 
@@ -18,16 +15,19 @@ class Stack:
         if not self.is_empty():
             return self.items.pop()
         else:
-            raise IndexError("pop from empty stack")
+            return None
 
     def peek(self):
         if not self.is_empty():
             return self.items[-1]
         else:
-            raise IndexError("peek from empty stack")
+            return None
+
+    def is_empty(self):
+        return len(self.items) == 0
 
     def size(self):
         return len(self.items)
 
-    def __str__(self):
-        return str(self.items)
+    def clear(self):
+        self.items.clear()
