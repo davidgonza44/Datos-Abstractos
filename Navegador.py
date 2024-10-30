@@ -59,3 +59,11 @@ class Queue:
     def size(self):
         return len(self.items)
 
+# Clase Pagina que representa una página web
+class Pagina:
+    def __init__(self, url, contenido, fecha, hora):
+        self.url = url
+        self.contenido = contenido
+        self.fecha = fecha
+        self.hora = hora
+
