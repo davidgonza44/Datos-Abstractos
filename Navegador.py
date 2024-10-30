@@ -31,3 +31,12 @@ class Stack:
 
     def clear(self):
         self.items.clear()
+
+class NodoPestania:
+    def __init__(self, nombre):
+        self.nombre = nombre  # Nombre de la pestaña
+        self.siguiente = None  # Puntero al siguiente nodo
+
+    def __str__(self):
+        return f"NodoPestania(nombre={self.nombre})"
+
